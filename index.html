@@ -434,7 +434,11 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
-  emailjs.init('kxztnmYk_v8LTu9il');
+ (function(){
+  emailjs.init({
+    publicKey: "kxztnmYk_v8LTu9il",
+  });
+})();
 
   document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
